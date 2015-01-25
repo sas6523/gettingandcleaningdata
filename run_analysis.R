@@ -51,8 +51,7 @@ names(featuresData) <- featuresNames$V2
 subjectActivityCombined <- cbind(subjectData, activityData)
 mergedData              <- cbind(featuresData, subjectActivityCombined)
 
-# Extracts only the measurements on the mean and standard deviation for each measurement. 
-# grep(mean and std, ignoring case)
+# Collect the variable names that include mean and sd by grep(mean and std, ignoring case)
 colsToKeep <- grep(".*mean.*|.*std.*", featuresNames$V2, ignore.case=TRUE)
 
 # add our subject and activity columns back into colsToKeep
